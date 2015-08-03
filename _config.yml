@@ -2,10 +2,10 @@
 title: samjbow.github.io
 email: thesamjbow@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  My personal website, created in Jekyll and hosted on GitHub.
+  My personal website, for all projects and professional information. Created in Jekyll and hosted on GitHub!
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://samjbow.github.io" # the base hostname & protocol for your site
-github_username:  samjbow
+github_username: samjbow
 
 # Build settings
 markdown: kramdown
