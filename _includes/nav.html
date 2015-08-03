@@ -1,0 +1,15 @@
+{% assign navurl = page.url | remove:'/index.html' %}
+<ul class="nav-menu{% if include.root %} sub-nav{% endif %}">
+{% for item in include.nav %}
+  {% capture url %}{{ include.root }}{{ item.href }}{% endcapture %}
+  <li>
+    <a class="page-link{% if url == navurl %} selected{% endif %}" href="{{ url }}">
+      {{ item.title }}
+    </a>
+    {% if item.subcategories %}
+        <i class="fa fa-chevron-down"></i>
+        {% include nav.html nav=item.subcategories root=url %}
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
