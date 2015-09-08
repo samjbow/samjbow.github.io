@@ -2,3 +2,30 @@
 layout: page
 title: Work Term 3 - eSentire Inc.
 ---
+<div class="nav-box fixed" id="nav-box">
+  <ul>
+    <li><a href="#">Intro</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ul>
+</div>
+<p>
+  In the summer of 2015, I was fortunate enough to work for eSentire in Cambridge, Ontario. eSentire is a cybersecurity company which specializes in active threat protection and network monitoring. Their services are aimed at mid-sized companies, and they have over 500 clients. The company was also in the midst of a tremendous expansion when I arrived, having doubled in size over the past year and recently opening an office in Cork, Ireland.
+</p>
+<p>
+  I spent my summer working in the Professional Services (PS) department, working on early development for projects which would eventually become internal tools for use by eSentire at large. I worked directly with Roy Firestein, who specialized in creating the various web applications for the company which I spent the first half of the summer working on.
+</p>
+<h2 id="about">About eSentire</h2>
+<h2 id="work">My Work</h2>
+<h2 id="acknowledgments">Acknowledgments</h2>
+
+<script>
+  window.addEventListener("scroll", function(event) {
+    if (window.scrollY > 58) {
+      document.getElementById("nav-box").classList.remove("fixed");
+    } else {
+      document.getElementById("nav-box").classList.add("fixed");
+    }
+  }, false);
+</script>

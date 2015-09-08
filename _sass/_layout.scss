@@ -8,6 +8,7 @@
  * Site header
  */
 .site-header {
+    border-bottom: 2px solid $grey-color-dark;
     background-color: $accent-color-dark;
     min-height: 56px;
 
@@ -139,7 +140,7 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $accent-color;
+    border-top: 2px solid $grey-color-dark;
     padding: $spacing-unit 0;
 }
 
@@ -156,7 +157,6 @@
 
 .footer-col-wrapper {
     font-size: 15px;
-    color: $grey-color;
     margin-left: -$spacing-unit / 2;
     @extend %clearfix;
 }
@@ -249,4 +249,22 @@
             font-size: 18px;
         }
     }
+}
+
+.nav-box {
+  position: fixed;
+  left: 50px;
+  top: 17px;
+  border: 2px solid $grey-color-dark;
+  padding: 10px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+}
+
+.fixed {
+  position: absolute;
+  top: 75px;
 }
