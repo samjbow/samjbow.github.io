@@ -42,12 +42,19 @@ title: Work Term 3 - eSentire Inc.
 
 </p>
 
+<div class="to-top">
+  <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+
 <script>
+  var navbox = document.getElementById("nav-box");
+  var headerHeight = document.getElementsByClassName("site-header")[0].offsetHeight;
+
   window.addEventListener("scroll", function(event) {
-    if (window.scrollY > 58) {
-      document.getElementById("nav-box").classList.remove("fixed");
+    if (window.scrollY > headerHeight) {
+      navbox.classList.remove("fixed");
     } else {
-      document.getElementById("nav-box").classList.add("fixed");
+      navbox.classList.add("fixed");
     }
   }, false);
 </script>
