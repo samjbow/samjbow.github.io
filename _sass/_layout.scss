@@ -257,6 +257,13 @@
   top: 17px;
   border: 2px solid $grey-color-dark;
   padding: 10px;
+  margin-bottom: 20px;
+
+  @include media-query($on-laptop) {
+    position: static;
+    left: auto;
+    top: auto;
+  }
 
   ul {
     list-style-type: none;
@@ -267,4 +274,10 @@
 .fixed {
   position: absolute;
   top: 75px;
+
+  @include media-query($on-laptop) {
+    position: static;
+    left: auto;
+    top: auto;
+  }
 }
