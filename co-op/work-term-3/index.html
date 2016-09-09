@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Work Term 3 - eSentire Inc.
+title: Work Term 3 - eSentire
 ---
 <div class="nav-box fixed" id="nav-box">
   <ul>
@@ -78,15 +78,4 @@ title: Work Term 3 - eSentire Inc.
   <a href="#"><i class="fa fa-chevron-up"></i></a>
 </div>
 
-<script>
-  var navbox = document.getElementById("nav-box");
-  var headerHeight = document.getElementsByClassName("site-header")[0].offsetHeight;
-
-  window.addEventListener("scroll", function(event) {
-    if (window.scrollY > headerHeight) {
-      navbox.classList.remove("fixed");
-    } else {
-      navbox.classList.add("fixed");
-    }
-  }, false);
-</script>
+<script type="text/javascript" src="/js/scrollingMenu.js"></script>
