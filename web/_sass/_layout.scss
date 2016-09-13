@@ -297,7 +297,28 @@
   }
 }
 
+pre {
+  padding: 10px 20px;
+}
+
+pre, code {
+    background-color: $grey-color-dark;
+    border: 1px solid $grey-color;
+}
+
 ol, ul {
   list-style-type: none;
   margin: 0;
+}
+
+em {
+  color: $grey-color;
+}
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }

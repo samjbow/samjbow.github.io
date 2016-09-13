@@ -2,16 +2,159 @@
 layout: page
 title: Work Terms 4 & 5 - eSentire
 ---
-<div class="nav-box fixed" id="nav-box">
+<div class="nav-box fixed no-print" id="nav-box">
   <ul>
     <li><a href="#">Intro</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
     <li><a href="#goals">Learning Goals</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </div>
 
 <p>
-  This January, I had the opportunity to return to my previous co-op position at eSentire in Cambridge, Ontario. I happily accepted the offer, and for the past eight months I've been working on an Agile development team on one of our product offerings.
+  This January, I had the opportunity to return to my previous co-op position at eSentire in Cambridge, Ontario. I happily accepted the offer, but despite going back to the same employer, my work experience couldn't have been more different. Whereas in my first work term with eSentire I worked largely independantly on research and prototyping, for the past eight months I've been working on an Agile development team on one of our newest product releases. My experience ranged from working on front-end websites using simple HTML, CSS and JavaScript, to backend work on APIs leveraging Amazon Web Services, to learning comprehensive testing technologies and frameworks. I couldn't be more content with how I've spent the past eight months, and I'd like to share some of the things I've learned during this time.
 </p>
+
+<h2 id="about">About eSentire</h2>
+<p>
+  <em>(Taken from <a href="/co-op/work-term-3">Work Term 3's work report</a>)</em>
+</p>
+<p>
+  eSentire is a cybersecurity company which specializes in active threat protection, network monitoring and other security-related services. Their services are aimed at mid-sized companies, having over 500 clients at the time of writing. The company was also in the midst of a tremendous growth when I arrived, having doubled in size over the past year and recently opening an office in Cork, Ireland. They were founded in 2001 by Eldon Sprickerhoff, and they continue to expand, hiring more employees and bringing in new clients every day.
+</p>
+<p>
+  To view more about eSentire, <a href="https://www.esentire.com/company/corporate-overview/" target="_blank">see their corporate overview.</a>
+</p>
+
+<h2 id="work">Work</h2>
+<p>
+  While my first semester was spent working independently on product prototypes, this semester I was working with a full-fledged Agile development team on a product, seeing it through from its inception and early development, to release and maintenance stages. I used a variety of new technologies, including Node.js and Amazon Web Services, as well as some familiar technologies like Django and basic web technologies. I was able to learn how Agile development teams work in practice outside of a classroom setting, and I was even able to contribute my own voice and experience where it was appropriate.
+</p>
+<p>
+  The project I worked on was <a href="https://www.esentire.com/what-we-do/core-technologies/esentire-dns/" target="_blank">DNS Firewall</a>, a service that works in tandem with our open source threat aggregator <a href="https://cymon.io/">Cymon</a> to serve DNS requests and block malicious websites before requests resolve. I was involved in every aspect of the tool's development, seeing its creation as a prototype when I first returned in January to seeing it release in early March. This extremely quick concept-to-release time was only achieved due to the skill of our team, our chemistry, and our effort under strong leadership. Once the project released in its initial state, we continued to add and update features, seek out and squash bugs, fix technical debts, and improve quality of service over my remaining time with the company.
+</p>
+<p>
+  Whereas with my first semester at eSentire I focused mostly on Django and basic web technologies, the past eight months were spent learning much more broad and varied skills. To follow are just some of the many skills I learned over the course of my time here working on this project.
+</p>
+<h2 id="goals">Learning Goals</h2>
+<p>
+  <em>
+    Unlike previous work reports which only covered one semester, this report covers two, and thus I have two sets of learning goals to share here.
+  </em>
+</p>
+<h3>Work Term 4</h4>
+<ol>
+  <li>
+    <h4>Goal 1: Expand my knowledge of Git</h4>
+    <p>
+      Git, and version control software in general, are nothing new to me. In the past I'd used Git, SVN and Mercurial version control software on multiple occasions. Despite this, my comfort level with Git has always been lukewarm at best, especially when it came to dealing with edge cases where Git would do something unexpected. In the first few weeks, I'd done something to my local branches that had me pulling my hair out after merging in features to my working branch that one of my coworkers had committed. It was at this point that I enlisted the help of Christian, our automation test developer, to help me out of my plight.
+    </p>
+    <p>
+      Christian taught me about the <code>git rebase</code> command. In short, the command takes changes in a target branch that aren't in your current branch, and applies them before your working changes. For feature branches that are only being worked on by individual developers, this is a far cleaner and more convenient method of keeping your branches up-to-date, avoiding merge conflicts, and keeping your commit tree concise. Additionally, the <code>-i</code> flag can be applied to perform the rebase in interactive mode, which we primarily used to squash long chains of commits made for each feature into a single commit. This again helped us keep our commit trees clean and also made identifying commits related to specific features much easier.
+    </p>
+    <p>
+      In addition to learning how to manage feature branches with <code>rebase</code>, another useful tool I learned this year was </code>cherry-pick</code>. While not quite as useful as <code>rebase</code>, this command lets you pull individual commits into your branch. This was a vital tool for us in being able to test how branches would integrate together before actually integrating them. On occasion, we had moments where two developers would be simultaneously working on features that could only be tested in the context of one-another. As we always wanted to test before merging, we used the cherry-pick feature to pick both commits into a new testing branch and test them together before merging each branch individually.
+    </p>
+    <p>
+      While not a comprehensive list of everything I did with Git, these two examples serve to show how much more confident I've become using the software. In the future I hope to expand my experience even further, but I'm extremely happy with the progress I've made with Git this work term.
+    </p>
+  </li>
+  <li>
+    <h4>Goal 2: Learn to work with an Agile development team</h4>
+    <p>
+      The biggest difference between this time at eSentire and the previous summer's time has been the change in working environment. Last year I answered almost entirely to Roy, and worked mostly either by myself or in collaboration with him. This year I was able to work with a newly formed development team, using Agile practices to manage the project we worked on. We worked in sprints, organized features and bugs into tickets, and prioritized those tickets to determine which would go into each sprint. We always thought one sprint ahead, keeping our current sprint progress in mind when considering what tickets could be added to our next sprints, and we used our experience as we grew to best gauge how much work we could handle (our velocity).
+    </p>
+    <p>
+      To me, much of this hearkened back to CIS*3750 where similarly, we worked in mock sprints with features and priority for each feature. The main difference in Agile for the real world is that we are constantly modifying our sprints as needed; bugs would be discovered, tech debt would require time and clients would request specific features, all requiring sprints to be refactored to best accommodate our clients' needs. This turned out to be an integral part of sprint planning that CIS*3750 is unable to cover.
+    </p>
+    <p>
+      While it may sound like I'm being harsh towards CIS*3750, the course did give me a lot of necessary vocabulary and understanding that I could bring to the table at eSentire. With a solid understanding of velocity and priority, and experience organizing our own sprints, I quickly felt comfortable in eSentire's Agile development setting.
+    </p>
+  </li>
+  <li>
+    <h4>Goal 3: Become a Node.js master</h4>
+    <p>
+      While the summer of 2015 was spent mostly on client-side JavaScript, I was challenged this semester with learning server-side JavaScript - <a href="https://nodejs.org/en/" target="_blank">better known as Node.js</a>. For the most part, this task wasn't terribly complicated. Basic understanding of JavaScript was 90% of the battle; the remaining 10% was learning how Node.js (<a href="https://www.npmjs.com/" target="_blank">and its package manager npm</a>) handled modules, as well as distinguishing what would and wouldn't still work moving from client- to server-side paradigms.
+    </p>
+    <p>
+      The most important thing to understand about JavaScript and Node.js is that it is single-threaded and non-blocking. Your programming methods will differ from conventional languages like Python, in that any asynchronous actions must be accounted for by ensuring responses are received before proceeding with any processing. This can be accounted for using callbacks, or if you want to be a bit fancier, <a href="https://www.promisejs.org/" target="_blank">Promises</a>. Callbacks can create deep levels of nesting, which are difficult to read (and even more difficult to test and debug, especially if you are using anonymous functions; a mistake I made during the first month or so of learning). In addition to using explicitly declared functions as callbacks, Promises allow you to chain callbacks together in an elegant manner that keeps your code clean and readable, even to someone with little experience in the language. Take the following code example, using callbacks:
+    </p>
+<pre><code>function doThis ( a, b, callback ) {
+  // some processing
+  callback ( a, b )
+}
+
+function doThat ( a, b ) {
+  //some more processing
+}
+
+doThis ( a, b, doThat );</code></pre>
+    <p>
+      This works, but is a bit clunky. Promises are much cleaner, and using the <code>this</code> keyword, the same example would look like this:
+    </p>
+    <pre><code>function doThis ( a, b ) {
+  return new Promise ( function ( resolve, reject ) ) {
+    // some processing
+    resolve ( a, b );
+  };
+}
+
+function doThat ( a, b ) {
+  return new Promise ( function ( resolve, reject ) ) {
+    //some more processing
+    resolve ( a, b );
+  };
+}
+
+doThis ( a, b ).then ( doThat );</code></pre>
+    <p>
+      There we have a piece of code that anybody could read, and it clearly communicates the asynchronous nature of the functions being called. This is just one example of the features Node.js provides to make asynchronous programming easier. I continued to use and improve with Node.js throughout my entire eight months with eSentire, and I now consider it by far my most competent language.
+    <p>
+</ol>
+<h3>Work Term 5</h4>
+<ol>
+  <li>
+    <h4>Goal 1: Get my head in the cloud</h4>
+    <p>
+      In my first four months with eSentire, we briefly touched on cloud computing in the form of <a href="https://aws.amazon.com/" target="_blank">Amazon Web Services</a>. However, my exposure to the service was largely hands-off, and this semester I was able to dive deeper into the world of cloud computing. Amazon Web Services (or AWS for short) is a service that could arguably be credited with running the internet from behind the scenes, and I was fortunate enough to be able to experience it firsthand with the project our development team worked on. The service provides a slew of features for developers and corporations to use, and while I used over half a dozen I barely scratched the surface of what AWS offers.
+    </p>
+    <p>
+      First and foremost, AWS provides tools for hosting program instances using <a href="https://aws.amazon.com/ec2/" target="_blank">Amazon Elastic Computing Cloud</a>, or EC2. EC2 instances are essentially replicas of the service you're hosting, which are created and destroyed on an as-needed basis to meet the volume of traffic without users being affected. This pairs nicely with <a href="https://aws.amazon.com/codepipeline/" target="_blank">Amazon CodePipeline</a>, which provides a means of easily deploying changed code automatically. Able to detect updates in version control software repositories, Amazon CodePipeline automatically updates your service by creating updated EC2 instances and tearing down the old ones, seamlessly updating your service without interruption.
+    </p>
+    <p>
+      Another popular service offered by AWS is <a href="https://aws.amazon.com/lambda/" target="_blank">AWS Lambda</a>, which provides you the opportunity to run small pieces of code without having to create your own servers. One popular application for such a service is to create a microservice-based project using Lambda to host API endpoints. Coupled with <a href="https://aws.amazon.com/api-gateway/" target="_blank">AWS API Gateway</a> and hosting datastores in EC2 (or one of Amazon's other datastore services), one can easily create a project built on lightweight APIs and microservices. Tying into this is <a href="https://serverless.com/" target="_blank">the Serverless application framework</a>, which allows developers to deploy code to AWS Lambda from their desktops, to any environment, without having to interrupt their existing services.
+    </p>
+    <p>
+      As mentioned in my first paragraph, this is only a small example of the power Amazon Web Services can provide a development team. The above examples are merely the ones that I was focused on during this co-op term, and while I feel well versed in them now, I'm eager to learn about AWS's many other offerings in the future.
+    </p>
+  </li>
+  <li>
+    <h4>Goal 2: Put forth more independent effort</h4>
+    <p>
+      This may seem like an odd goal considering my first semester with eSentire was spent working independently, but part of joining a team includes being able to contribute to that team, and that was something I hadn't quite experienced in a co-op term yet. Despite having completed four before this, most of my work was spent on solo projects, and collaboration in a workplace setting wasn't something I had a great deal of experience with. Whether it was sorting out merge conflicts with Git, discussing important team decisions in meetings, planning future sprints or discussing implementation details, I wanted to make sure that this semester I offered my experience as often as I could (without inflating my own ego too much).
+    </p>
+    <p>
+      Moreso than any work term in the past, this one was filled with meetings. Stand-ups were daily. Initially, backlog grooming happened weekly, and sprint planning and backlog grooming happened bi-weekly, but as the team grew more experienced and comfortable we were able to condense these meetings to save time. As my experience with our technology stack grew, and as I researched more and more, I felt gradually more comfortable contributing my voice to important topics of discussion. My team was also very open-minded, and our discussions were extremely insightful and enlightening.
+    </p>
+  </li>
+  <li>
+    <h4>Goal 3: Learn industry testing strategy</h4>
+    <p>
+      When you have a growing project that is constantly being updated and refined, it becomes absolutely necessary to ensure your service quality with every release. This is where testing plays an important role in an Agile workflow. Every new feature undergoes multiple forms of testing: developers and testers, perform manual functional testing, developers write unit tests for functional and regression testing, testers work with an integration test suite to ensure integration testing, etc. While any developer worth their salt should be testing their own code, this was the first semester I was able to really learn how development teams used testing frameworks to create test suites for their projects.
+    </p>
+    <p>
+      Prior to my return to eSentire I had just finished CIS*4150: Software Reliability and Testing, in which we were taught various testing methods and strategies. Whereas CIS*4150 gave me a very broad look at testing strategy, my time at eSentire instead focused on depth and application. I learned how to write proper unit tests thanks entirely to a very persistent project lead (that's you, Ralph), and was able to see the results integrated with code coverage software and a fully automated regression testing suite. Among the technologies used were many Node.js unit testing packages, including Mocha, Sinon and Chai just to name a few. Mocha provided the overall framework for writing unit tests and test suites. Sinon allowed for external dependancies to be stubbed to see how a particular unit would behave under controlled circumstances. Chai validated results in a behaviour-driven manner, keeping test suites clean and readable.
+    </p>
+    <p>
+      In addition to simply writing these tests suites, every once in a while a new feature would break an old one (in our development environment, fortunately) and one of us would be tasked with quickly finding and fixing the issue. More often that not the issues were minor and quickly solved, but occasionally they would require more investigation. In these situations, I also learned to leverage known test results to determine causes of these issues. In short, testing helps to facilitate debugging.
+    </p>
+  </li>
+</ol>
+
+<h2 id="conclusion">Conclusion and Acknowledgments</h2>
+<p>
+  I don't think I could have asked for more from my return to eSentire. I learned more than I could've imagined, from technical skills like managing cloud architecture and creating testing suites to soft skills like teamwork. I worked with a fantastic team of people; Roy Firestein, Ralph Janke, Ryan Hasmatali, Christian Mitchell, Adi Waghaye, Md Kamruzzaman, Don Walsh, Harshanee Patel and Graham Digby were all essential in teaching me everything I learned these two semesters, and that only names the core team. These eight months wouldn't have been what they were without you guys, the team chemistry was undeniable and I sincerely hope I get to work with you all again when I graduate. Thank you all so much!
+</p>
+
+<script type="text/javascript" src="/js/scrollingMenu.js"></script>
