@@ -1,13 +1,13 @@
 <ul class="nav-menu{% if include.root %} sub-nav{% endif %}">
     {% for item in include.nav %}
-        <li class="{% if page.url contains item.href %} selected{% endif %}">
-            <a class="page-link" href="{{ item.href }}">
+    <li class="{% if page.url contains item.href %} selected{% endif %}">
+        <a class="page-link" href="{{ item.href }}">
             {{ item.title }}
-            </a>
-            {% if item.subcategories %}
-                <i class="fa fa-chevron-down"></i>
-                {% include nav.html nav=item.subcategories root=url %}
-            {% endif %}
-        </li>
+        </a>
+        {% if item.subcategories %}
+        <i class="fa fa-chevron-down"></i>
+        {% include nav.html nav=item.subcategories root=url %}
+        {% endif %}
+    </li>
     {% endfor %}
 </ul>

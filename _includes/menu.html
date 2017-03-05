@@ -1,7 +1,7 @@
 <div class="nav-box fixed" id="nav-box">
     <ul>
         {% for item in include.menu %}
-            <li><a href= {{ "#" | append: item.id }}>{{ item.title }}</a></li>
+        <li><a href= {{ "#" | append: item.id }}>{{ item.title }}</a></li>
         {% endfor %}
     </ul>
 </div>
