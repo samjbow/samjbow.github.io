@@ -1,0 +1,73 @@
+---
+layout: page
+title: About
+---
+
+<div class="content-container">
+    {% for skill in site.data.skills %}
+        <div class="content-box">
+            <h3 class="box-header">
+                {{ skill.title }}
+            </h2>
+            <div class="box-content">
+                {{ skill.description }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- <div class="content-col half">
+    <h2 class="post-title">Languages and Technologies</h2>
+    <ul>
+        <li>
+            JavaScript – ES6, JQuery, NodeJS, Angular.js, React, React Native
+        </li>
+        <li>
+            Python – Python 2, Python 3, Django
+        </li>
+        <li>
+            AWS – EC2, Lambda, CloudWatch, SNS
+        </li>
+        <li>
+            Databases – SQL, MongoDB, Redis
+        </li>
+        <li>
+            Tools – Ionic, Jekyll, npm, Git
+        </li>
+        <li>
+            OSes – Windows, Ubuntu, Mac OS X
+        </li>
+        <li>
+            Other – HTML5, CSS3, C, Java
+        </li>
+    </ul>
+</div>
+
+
+<div class="content-col half">
+    <h2 class="post-title">Skills</h2>
+    <ul>
+        <li>
+            Agile development methodologies
+        </li>
+        <li>
+            Architectural and design patterns
+        </li>
+        <li>
+            Data structures
+        </li>
+        <li>
+            Object-oriented design
+        </li>
+        <li>
+            Mobile application development
+        </li>
+        <li>
+            Version control with Git and GitHub
+        </li>
+        <li>
+            Regular expressions
+        </li>
+    </ul>
+
+</div> -->

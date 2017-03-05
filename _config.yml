@@ -9,3 +9,6 @@ github_username: samjbow
 linkedin_username: samjbow
 # Build settings
 markdown: kramdown
+collections:
+    posts:
+        permalink: /blog/:categories/:year/:month/:day/:title

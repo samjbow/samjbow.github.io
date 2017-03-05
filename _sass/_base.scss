@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-    color: $accent-color-light;
+    color: $accent-color;
     text-decoration: none;
 
     &:hover {
@@ -150,8 +150,7 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: 70%;
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;

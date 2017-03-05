@@ -16,7 +16,7 @@
     position: relative;
 
     .selected {
-        box-shadow: 0px -3px 0px $text-color inset;
+        box-shadow: 0px -3px 0px $text-color-white inset;
     }
 
     a {
@@ -26,7 +26,6 @@
     .site-nav li:hover,
     .site-title:hover {
         background-color: $accent-color-darker;
-
         a:hover {
             text-decoration: none;
         }
@@ -40,7 +39,7 @@
     float: left;
 
     a {
-        color: $text-color;
+        color: $text-color-white;
     }
 }
 
@@ -53,7 +52,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $text-color-white;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
@@ -150,13 +149,22 @@
  * Site footer
  */
 .site-footer {
-    border-top: 2px solid $grey-color-dark;
+    // position: absolute;
+    // bottom: 0;
+    border-top: 3px solid $accent-color-dark;
     padding: $spacing-unit 0;
+    background-color: $grey-color-darker;
+    color: $text-color-white;
+
+    a {
+        color: $accent-color-light;
+    }
 }
 
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
 }
 
 .contact-list,
@@ -194,6 +202,36 @@
     font-size: 20px;
 }
 
+.content-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .content-box {
+        width: calc(33% - ( 2 * #{$spacing-unit} / 3 ));
+        margin: $spacing-unit/3;
+        // border-bottom: 3px solid $text-color;
+
+        @include media-query ($on-palm) {
+            width: 100%;
+        }
+
+        .box-header {
+            color: $accent-color;
+            margin: 0;
+        }
+    }
+}
+
+.content-col {
+    float: left;
+    padding: 0 10px;
+
+    &.half {
+        width: 50%;
+    }
+}
+
 
 /**
  * Posts
@@ -210,7 +248,7 @@
     font-size: 26px;
     font-weight: 400;
     margin-bottom: 0;
-    color: $accent-color-light;
+    color: $accent-color;
 
     @include media-query($on-laptop) {
         font-size: 36px;
