@@ -1,19 +1,19 @@
 <header class="site-header">
 
-  <div class="wrapper">
+    <div class="wrapper">
 
-    <h1 class="site-title{% if page.url == "/" %} selected{% endif %}"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
+        <h1 class="site-title{% if page.url == "/" %} selected{% endif %}"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
 
-    <nav class="site-nav no-print">
-      <a href="#" class="menu-icon">
-        <i class="fa fa-navicon"></i>
-      </a>
+        <nav class="site-nav no-print">
+            <a href="#" class="menu-icon">
+                <i class="fa fa-navicon"></i>
+            </a>
 
-      <div class="trigger">
-        {% include nav.html nav=site.data.nav %}
-      </div>
-    </nav>
+            <div class="trigger">
+                {% include nav.html nav=site.data.nav %}
+            </div>
+        </nav>
 
-  </div>
+    </div>
 
 </header>

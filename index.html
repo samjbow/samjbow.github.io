@@ -1,12 +1,18 @@
 ---
 layout: default
-title: Welcome!
+title: Home
 ---
 
-<div class="post">
-  <header class="post-header">
-  </header>
+{% include menu.html menu = site.posts %}
 
-  {% include menu.html menu=site.data.menu %}
-
-</div>
+{% for post in site.posts %}
+    <div class="post-header">
+        <h2 id="{{ post.id }}" class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <span class="post-date">
+            {{ post.date | date: "%b %-d, %Y" }}
+        </span>
+    </div>
+    <div class="post-body">
+        {{ post.excerpt }}
+    </div>
+{% endfor %}
